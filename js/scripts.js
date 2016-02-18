@@ -8,6 +8,7 @@ $(document).ready(function() {
 											article.blurb, 
 											article.article, 
 											article.tags));
+		gfyCollection.init();
 	});
 
 	$(".article-header").click(function() {
@@ -19,6 +20,12 @@ $(document).ready(function() {
 										   $(".header").height() - 
 										   (2 * parseInt($(".articles").css("padding")))
 	});
+
+	if (document.addEventListener) {
+		document.addEventListener("DOMContentLoaded", gfyCollection.init, false);
+	} else {
+		document.attachEvent("onreadystatechange", gfyCollection.init);
+	}
 });
 
 var createArticle = function(id, title, author, authorTwitter, date, blurb, article, tags) {
@@ -30,5 +37,5 @@ var createArticle = function(id, title, author, authorTwitter, date, blurb, arti
 	articleDiv += "<div class='article-body'>" + article + "</div>";
 	articleDiv += "</div>";
 
-	return articleDiv
+	return articleDiv;
 }
