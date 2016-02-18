@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="img/colts.png" />
+
+	<title>The Colts Locker</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://assets.gfycat.com/gfycat.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/htmlgen.js"></script>
+</head>
+<body>
+	<div class="header shadow">
+		<div class="header-text container">The Colts Locker</div>
+	</div>
+	<div class="main">
+		<div class="articles container shadow">
+			<div id="imgur-gen" class="url-gen shadow">
+				<div class="gen-head">Imgur GIFs</div><br>
+				<div class="gen-body">			
+					<div class="url-format">Format as: <b>http://i.imgur.com/sGRX3Du.gif</b></div><br>
+					<label for="imgur-gen-field">Enter imgur url:</label>
+					<input type="text" id="imgur-gen-field" />
+					<span id="imgur-gen-submit" class="shadow">Submit</span>
+				</div>
+				<div class="gen-output">
+					<textarea readonly id="imgur-gen-output"></textarea>
+				</div>
+			</div>
+			<div id="gfycat-gen" class="url-gen shadow">
+				<div class="gen-head">Gfycat GIFs</div><br>
+				<div class="gen-body">			
+					<div class="url-format">Format as: <b>http://gfycat.com/DelayedArtisticGuppy</b></div><br>
+					<label for="gfycat-gen-field">Enter gfycat url:</label>
+					<input type="text" id="gfycat-gen-field" />
+					<span id="gfycat-gen-submit" class="shadow">Submit</span>
+				</div>
+				<div class="gen-output">
+					<textarea readonly id="gfycat-gen-output"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>
