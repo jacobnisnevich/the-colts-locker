@@ -17,7 +17,7 @@ $(document).ready(function() {
 	$(".articles").css({
 		"min-height": $(window).height() - $(".footer").height() - 
 										   $(".header").height() - 
-										   parseInt($(".articles").css("padding"))
+										   (2 * parseInt($(".articles").css("padding")))
 	});
 });
 
