@@ -10,8 +10,8 @@ $(document).ready(function() {
 											article.tags));
 	});
 
-	$(".article").click(function() {
-		$(this).children(".article-body").slideToggle();
+	$(".article-header").click(function() {
+		$(this).parent().children(".article-body").slideToggle();
 	});
 
 	$(".articles").css({
