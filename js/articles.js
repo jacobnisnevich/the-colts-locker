@@ -1,5 +1,5 @@
 var articles = [{
-    "id": "colts-suck",
+    "id": "garnettt-scouting-report",
     "title": "Josh Garnett Scouting Report",
     "author": "Daniel Mindlin",
     "authorTwitter": "https://www.twitter.com/theonlymindlin",
