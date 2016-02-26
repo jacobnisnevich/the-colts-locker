@@ -1,5 +1,8 @@
 $(document).ready(function() {
-	articles.forEach(function(article) {
+	var articleId = getUrlParameter("article");
+
+	if (articleId) {
+		var article = $.grep(articles, function(x) { return x.id == articleId; })[0];
 		$(".articles").append(createArticle(article.id, 
 											article.title,
 											article.author,
@@ -9,7 +12,21 @@ $(document).ready(function() {
 											article.article, 
 											article.tags));
 		gfyCollection.init();
-	});
+		$(".article-body").slideToggle();
+	} else {
+		articles.forEach(function(article) {
+			$(".articles").append(createArticle(article.id, 
+												article.title,
+												article.author,
+												article.authorTwitter,
+												article.date, 
+												article.blurb, 
+												article.article, 
+												article.tags));
+			gfyCollection.init();
+		});
+	}
+
 
 	$(".article-header").click(function() {
 		$(this).parent().children(".article-body").slideToggle();
@@ -39,3 +56,19 @@ var createArticle = function(id, title, author, authorTwitter, date, blurb, arti
 
 	return articleDiv;
 }
+
+
+var getUrlParameter = function(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
