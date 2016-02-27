@@ -23,7 +23,9 @@ $(document).ready(function() {
 												article.blurb, 
 												article.article, 
 												article.tags));
-			gfyCollection.init();
+			if (articles.indexOf(article) == articles.length - 1) {
+				gfyCollection.init();
+			}
 		});
 	}
 
