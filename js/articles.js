@@ -1,5 +1,5 @@
-var articles = [{
 
+var articles = [{
     "id": "conklin-scouting-report",
     "title": "Jack Conklin Scouting Report",
     "author": "Daniel Mindlin",
