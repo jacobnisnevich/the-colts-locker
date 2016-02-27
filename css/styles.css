@@ -122,6 +122,7 @@ body {
 	width: 502px;
 	height: 620px;
 	border: 0;
+	max-width: 100%;
 }
 
 .footer {
